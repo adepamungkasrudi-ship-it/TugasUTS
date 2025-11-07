@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         val editFirstName = findViewById<EditText>(R.id.editFirstName)
         val editLastName = findViewById<EditText>(R.id.editLastName)
         val editPassword = findViewById<EditText>(R.id.editPassword)
-        val editConfirmPassword = findViewById<EditText>(R.id.editConfirmPassword)
+        val editConfirmPassword = findViewById<EditText>(R.id.editPassword)
         val btnSubmit = findViewById<Button>(R.id.btnSubmit)
         val btnCancel = findViewById<Button>(R.id.btnCancel)
 
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 username.isEmpty() || email.isEmpty() ||
                         firstName.isEmpty() || lastName.isEmpty() ||
                         password.isEmpty() || confirmPassword.isEmpty() -> {
-                    Toast.makeText(this, "Semua input tidak boleh kosong", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Semua kolom harus diisi!", Toast.LENGTH_SHORT).show()
                 }
 
                 password != confirmPassword -> {
